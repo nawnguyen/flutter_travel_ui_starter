@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_ui_starter/models/hotel_model.dart';
 
-
 class HotelCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
