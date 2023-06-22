@@ -11,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
+  int _currentTab = 0;
   final List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
         decoration: BoxDecoration(
           color: _selectedIndex == index
               ? Theme.of(context).accentColor
-              : Color(0xFFE7EBEE),
+              : const Color(0xFFE7EBEE),
           borderRadius: BorderRadius.circular(30.0),
         ),
         child: Icon(
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           size: 25.0,
           color: _selectedIndex == index
               ? Theme.of(context).primaryColor
-              : Color(0xFFB4C1C4),
+              : const Color(0xFFB4C1C4),
         ),
       ),
     );
@@ -79,6 +80,25 @@ class _HomeScreenState extends State<HomeScreen> {
             HotelCarousel(),
           ],
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentTab,
+        items: const [
+          BottomNavigationBarItem(
+            label: 'text',
+              icon: Icon(
+                Icons.search,
+                size: 30.0,
+              ),
+          ),
+          BottomNavigationBarItem(
+            label: '',
+            icon: Icon(
+              Icons.search,
+              size: 30.0,
+            ),
+          ),
+        ],
       ),
     );
   }
