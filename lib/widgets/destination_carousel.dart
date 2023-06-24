@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import '../models/destination_model.dart';
 
 class DestinationCarousel extends StatelessWidget {
+  const DestinationCarousel({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +95,8 @@ class DestinationCarousel extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child:
+                      child: Stack(
+                        children: <Widget>[
                           ClipRRect(
                             borderRadius: BorderRadius.circular(20.0),
                             child: Image(
@@ -103,6 +106,8 @@ class DestinationCarousel extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                           ),
+                        ],
+                      ),
                       ),
                   ],
                 ),

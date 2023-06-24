@@ -5,13 +5,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/hotel_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  int _currentTab = 0;
+  final int _currentTab = 0;
   final List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
@@ -74,9 +76,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                   .toList(),
             ),
-            SizedBox(height: 20.0),
-            DestinationCarousel(),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
+            const DestinationCarousel(),
+            const SizedBox(height: 20.0),
             HotelCarousel(),
           ],
         ),

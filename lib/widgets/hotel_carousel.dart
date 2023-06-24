@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travel_ui_starter/models/hotel_model.dart';
 
 class HotelCarousel extends StatelessWidget {
+  const HotelCarousel({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -69,17 +71,17 @@ class HotelCarousel extends StatelessWidget {
                                   letterSpacing: 1.2,
                                 ),
                               ),
-                              SizedBox(height: 2.0),
+                              const SizedBox(height: 2.0),
                               Text(
                                 hotel.address,
                                 style: const TextStyle(
                                   color: Colors.grey,
                                 ),
                               ),
-                              SizedBox(height: 2.0),
+                              const SizedBox(height: 2.0),
                               Text(
                                 '\$${hotel.price} / night',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.w600
                                 ),
