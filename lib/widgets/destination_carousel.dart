@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../models/destination_model.dart';
 
 class DestinationCarousel extends StatelessWidget {
@@ -106,6 +107,38 @@ class DestinationCarousel extends StatelessWidget {
                               fit: BoxFit.cover,
                             ),
                           ),
+                          Positioned(
+                            left: 10.0,
+                            bottom: 10.0,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                              Text(
+                                  destination.city,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                    letterSpacing: 1.2,
+                                  ),
+                              ),
+                              Row(
+                                children: [
+                                  const Icon(
+                                    FontAwesomeIcons.locationArrow,
+                                    size: 10.0,
+                                    color: Colors.white,
+                                  ),
+                                  const SizedBox(width: 5.0),
+                                  Text(
+                                    destination.country,
+                                    style: const TextStyle(
+                                        color: Colors.white,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],),
+                          )
                         ],
                       ),
                       ),

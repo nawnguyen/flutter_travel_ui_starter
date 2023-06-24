@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_ui_starter/models/hotel_model.dart';
+import '../models/hotel_model.dart';
 
 class HotelCarousel extends StatelessWidget {
   const HotelCarousel({super.key});
@@ -14,7 +14,7 @@ class HotelCarousel extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               const Text(
-                'Exclusive Hotel',
+                'Exclusive Hotels',
                 style: TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
@@ -81,9 +81,9 @@ class HotelCarousel extends StatelessWidget {
                               const SizedBox(height: 2.0),
                               Text(
                                 '\$${hotel.price} / night',
-                              style: const TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w600
+                                style: const TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],

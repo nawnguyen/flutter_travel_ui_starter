@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_ui_starter/widgets/destination_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../widgets/hotel_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  final int _currentTab = 0;
+  int _currentTab = 0;
   final List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
@@ -79,20 +76,14 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 20.0),
             const DestinationCarousel(),
             const SizedBox(height: 20.0),
-            HotelCarousel(),
+            const HotelCarousel(),
           ],
         ),
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTab,
         items: const [
-          BottomNavigationBarItem(
-            label: 'text',
-              icon: Icon(
-                Icons.search,
-                size: 30.0,
-              ),
-          ),
           BottomNavigationBarItem(
             label: '',
             icon: Icon(
@@ -100,6 +91,20 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 30.0,
             ),
           ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.local_pizza,
+                size: 30.0,
+              ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: CircleAvatar(
+              radius: 15.0,
+              backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'),
+            ),
+              label: '',
+            ),
         ],
       ),
     );
