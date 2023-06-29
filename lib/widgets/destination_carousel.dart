@@ -46,14 +46,14 @@ class DestinationCarousel extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               Destination destination = destinations[index];
               return GestureDetector(
-              onTap: () =>Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => DestinationScreen(
-                    destination: destination,
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => DestinationScreen(
+                      destination: destination,
+                    ),
                   ),
                 ),
-              ),
                 child: Container(
                   margin: const EdgeInsets.all(10.0),
                   width: 210.0,
@@ -126,36 +126,36 @@ class DestinationCarousel extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
-                                Text(
+                                  Text(
                                     destination.city,
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w600,
                                       letterSpacing: 1.2,
                                     ),
-                                ),
-                                Row(
-                                  children: [
-                                    const Icon(
-                                      FontAwesomeIcons.locationArrow,
-                                      size: 10.0,
-                                      color: Colors.white,
-                                    ),
-                                    const SizedBox(width: 5.0),
-                                    Text(
-                                      destination.country,
-                                      style: const TextStyle(
-                                          color: Colors.white,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Icon(
+                                        FontAwesomeIcons.locationArrow,
+                                        size: 10.0,
+                                        color: Colors.white,
                                       ),
-                                    ),
-                                  ],
-                                ),
-                               ],
+                                      const SizedBox(width: 5.0),
+                                      Text(
+                                        destination.country,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
                             )
                           ],
                         ),
-                        ),
+                      ),
                     ],
                   ),
                 ),

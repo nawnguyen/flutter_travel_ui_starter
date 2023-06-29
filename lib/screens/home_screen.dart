@@ -100,15 +100,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.local_pizza,
                 size: 30.0,
               ),
-            label: ''
-          ),
+              label: ''),
           BottomNavigationBarItem(
             icon: CircleAvatar(
               radius: 15.0,
               backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'),
             ),
-              label: '',
-            ),
+            label: '',
+          ),
         ],
       ),
     );

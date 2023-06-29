@@ -1,6 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'
-    show BorderRadius, BoxDecoration, BoxShadow, BuildContext, Colors, Column, Container, IconButton, Icons, MediaQuery, Offset, Scaffold, Stack, State, StatefulWidget, Widget;
+    show
+        BorderRadius,
+        BoxDecoration,
+        BoxShadow,
+        BuildContext,
+        Colors,
+        Column,
+        Container,
+        IconButton,
+        Icons,
+        MediaQuery,
+        Offset,
+        Scaffold,
+        Stack,
+        State,
+        StatefulWidget,
+        Widget;
 import 'package:flutter_travel_ui_starter/models/destination_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -45,7 +61,8 @@ class _DestinationScreenState extends State<DestinationScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 40.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 10.0, vertical: 40.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -55,19 +72,21 @@ class _DestinationScreenState extends State<DestinationScreen> {
                       color: Colors.black,
                       onPressed: () => Navigator.pop(context),
                     ),
-                    Row(children: <Widget>[
-                      IconButton(
-                        icon: const Icon(Icons.search),
-                        iconSize: 30.0,
-                        color: Colors.black,
-                        onPressed: () => Navigator.pop(context),
-                      ),IconButton(
-                        icon: Icon(Icons.sort),
-                        iconSize: 25.0,
-                        color: Colors.black,
-                        onPressed: () => Navigator.pop(context),
-                      ),
-                     ],
+                    Row(
+                      children: <Widget>[
+                        IconButton(
+                          icon: const Icon(Icons.search),
+                          iconSize: 30.0,
+                          color: Colors.black,
+                          onPressed: () => Navigator.pop(context),
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.sort),
+                          iconSize: 25.0,
+                          color: Colors.black,
+                          onPressed: () => Navigator.pop(context),
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -112,8 +131,8 @@ class _DestinationScreenState extends State<DestinationScreen> {
                 bottom: 20.0,
                 child: Icon(
                   Icons.location_on,
-                color: Colors.white70,
-                size: 25.0,
+                  color: Colors.white70,
+                  size: 25.0,
                 ),
               ),
             ],
