@@ -80,9 +80,13 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTab,
+        onTap: (int value) {
+          setState(() {
+            _currentTab = value;
+          });
+        },
         items: const [
           BottomNavigationBarItem(
             label: '',
@@ -96,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.local_pizza,
                 size: 30.0,
               ),
-            label: '',
+            label: ''
           ),
           BottomNavigationBarItem(
             icon: CircleAvatar(
