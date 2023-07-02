@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/hotel_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -14,8 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<IconData> _icons = [
     FontAwesomeIcons.plane,
     FontAwesomeIcons.bed,
-    FontAwesomeIcons.walking,
-    FontAwesomeIcons.biking,
+    FontAwesomeIcons.personWalking,
+    FontAwesomeIcons.personBiking,
   ];
 
   Widget _buildIcon(int index) {
@@ -30,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 60.0,
         decoration: BoxDecoration(
           color: _selectedIndex == index
-              ? Theme.of(context).accentColor
+              ? Theme.of(context).colorScheme.secondary
               : const Color(0xFFE7EBEE),
           borderRadius: BorderRadius.circular(30.0),
         ),
